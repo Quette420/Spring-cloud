@@ -1,0 +1,39 @@
+server:
+  port: 8077
+  tomcat:
+    threads:
+      max: 20
+      min-spare: 10
+    max-connections: 100
+spring:
+  application:
+    name: "MS - Template(IBS)"
+  datasource:
+    internal:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: 1234
+      url: jdbc:postgresql://localhost:5432/IBS_Template
+      ddl-auto: update
+      show-sql: true
+    external:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: ipxalscv
+      url: jdbc:postgresql://91.203.176.233:5432/hc_gfo
+      ddl-auto: update
+      show-sql: true
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+settings:
+  topic-name: incoming.ibs.change.db
+  processor:
+    pool-size: 5
+    max-pool-size: 10
+    keep-alive-seconds: 1000
+logging:
+  level:
+    root: info
+
