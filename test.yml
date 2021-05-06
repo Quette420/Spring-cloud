@@ -1,1 +1,2 @@
-profiles: test
+name: default 
+profiles: application
