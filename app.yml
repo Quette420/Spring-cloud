@@ -1,0 +1,6 @@
+my:
+  greeting: Hello world
+  list: one,two,three
+db:
+  username: postgres
+  password: 1234
