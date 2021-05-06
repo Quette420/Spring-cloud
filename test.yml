@@ -1,2 +1,4 @@
 name: testApp 
 profiles: testProfile
+propertySources: 
+  db: some info
